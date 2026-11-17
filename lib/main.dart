@@ -22,7 +22,6 @@ class FakeCallApp extends StatelessWidget {
   }
 }
 
-// ================= 1. الشاشة الرئيسية =================
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -38,7 +37,6 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isScheduled = false;
   Timer? _scheduleTimer;
 
-  // بدء مكالمة فورية
   void _startInstantCall() {
     Navigator.push(
       context,
@@ -51,7 +49,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // جدولة المكالمة
   void _scheduleCall() {
     final now = DateTime.now();
     final scheduledDateTime = DateTime(
@@ -194,7 +191,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-// ================= 2. شاشة الرنين (الواردة) =================
 class RingingScreen extends StatelessWidget {
   final String callerName;
   final String callerNumber;
@@ -287,7 +283,6 @@ class RingingScreen extends StatelessWidget {
   }
 }
 
-// ================= 3. شاشة المكالمة النشطة (بعد الرد) =================
 class ActiveCallScreen extends StatefulWidget {
   final String callerName;
   final String callerNumber;
